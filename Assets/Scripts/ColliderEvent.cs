@@ -126,7 +126,7 @@ public class ColliderEvent : MonoBehaviour
         Destroy(collision.gameObject);
 
         thisObject.GetComponent<Eukaryote>().ChangeHP(hpChanger);
-        thisObject.GetComponent<Eukaryote>().ChangeScale(2f);
+        thisObject.GetComponent<Eukaryote>().ChangeScale(0.5f);
     }
     private void DoInfection(GameObject thisObject, Collider collision, bool zoom, string tag)
     {

@@ -36,7 +36,7 @@ public class Eukaryote : MonoBehaviour
     {
         Speed = PlayerPrefs.GetInt("SpeedEu");
         hpChanger = -0.001f;
-        maxScale = 13;
+        maxScale = 10;
         DirectionChange = 2000;
         GenerationPlace = GameObject.Find("GenerationPlace");
 

@@ -33,7 +33,7 @@ public class CreateNewObj : MonoBehaviour
         newCoord = GenerateArray();
         // var tmp;
         //Создание префабов
-        for (int i = 0; i < PlayerPrefs.GetInt("CountSpawn"); i++)
+        for (int i = 0; i < 100; i++)
         {
             rand_obj = Random.Range(0, 2);
             inst_obj = Instantiate(simpleCells[rand_obj], new Vector3(newCoord[i, 0], 0, newCoord[i, 1]), Quaternion.identity) as GameObject;
@@ -141,65 +141,9 @@ public class CreateNewObj : MonoBehaviour
 
         oldObj = Instantiate(zoom == true ? detailDeadCells[numprefab] : simpleDeadCells[numprefab], new Vector3(transform.position.x, 0, transform.position.z), transform.rotation) as GameObject;
         oldObj.AddComponent<DeadCell>().SetParams(oldObj, tag, name, transform.localScale.x, numprefab);
-        //switch (tag)
-        //{
-        //    case "bacteriaDead":
-        //            oldObj.AddComponent<DeadCell>().SetParams(oldObj, tag, name, transform.localScale.x, numprefab);
-        //        break;
-        //    case "bacteriaDeadDetailed":
-        //            oldObj.AddComponent<DeadCell>().SetParams(oldObj, tag, name, transform.localScale.x, numprefab);
-        //        break;
-        //    case "cianobacteriaDead":
-        //            oldObj.AddComponent<DeadCell>().SetParams(oldObj, tag, name, transform.localScale.x, numprefab);
-        //        break;
-        //    case "cianobacteriaDeadDetailed":
-        //            oldObj.AddComponent<DeadCell>().SetParams(oldObj, tag, name, transform.localScale.x, numprefab);
-        //        break;
-        //    case "virusDead":
-        //            oldObj.AddComponent<DeadCell>().SetParams(oldObj, tag, name, transform.localScale.x, numprefab);
-        //        break;
-        //    case "virusDeadDetailed":
-        //            oldObj.AddComponent<DeadCell>().SetParams(oldObj, tag, name, transform.localScale.x, numprefab);
-        //        break;
-        //    default:
-        //        print("U'do some mistake!");
-        //        break;
-        //}
+       
     }
-    //Замена префабов дочерней клетки
-    //public void RecreateObjSubsidiary(GameObject oldObj, string parent, string name, string tag, int numprefab, bool zoom, float hp, float scalebuffer)
-    //{
-    //    Transform transform = oldObj.transform;
-    //    Destroy(oldObj.gameObject);
-
-    //    oldObj = Instantiate(zoom == true ? detailCells[numprefab] : simpleCells[numprefab], new Vector3(transform.position.x, 0, transform.position.z), transform.rotation) as GameObject;
-    //    switch (tag)
-    //    {
-    //        case "bacteria":
-    //            {
-    //                oldObj.AddComponent<SubsidiaryCell>().SetParams(parent, oldObj, 0,scalebuffer);
-    //            }
-    //            break;
-    //        case "bacteriaDetailed":
-    //            {
-    //                oldObj.AddComponent<SubsidiaryCell>().SetParams(parent, oldObj, 0,scalebuffer);
-    //            }
-    //            break;
-    //        case "cianobacteria":
-    //            {
-    //                oldObj.AddComponent<SubsidiaryCell>().SetParams(parent, oldObj, 1, scalebuffer);
-    //            }
-    //            break;
-    //        case "cianobacteriaDetailed":
-    //            {
-    //                oldObj.AddComponent<SubsidiaryCell>().SetParams(parent, oldObj, 1, scalebuffer);
-    //            }
-    //            break;
-    //        default:
-    //            print("U'do some mistake!");
-    //            break;
-    //    }
-    //}
+   
     public void CreateSubsidiaryCell(GameObject parent, string tag, int numprefab, bool zoom, float scalebuffer)
     {
         GameObject subsidiary = Instantiate(zoom == true ? detailCells[numprefab] : simpleCells[numprefab], parent.transform.position, parent.transform.rotation) as GameObject;

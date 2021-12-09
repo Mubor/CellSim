@@ -72,7 +72,7 @@ public class World : MonoBehaviour
             tick = 0;
             ChangeCianoHpChanger();
         }
-        colonysize = CurrentColony(5);
+        colonysize = CurrentColony(15);
         tick++;
     }
 

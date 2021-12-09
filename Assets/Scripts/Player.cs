@@ -26,42 +26,42 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
-            transform.position = new Vector3(transform.position.x + 5, transform.position.y, transform.position.z + 5);
+            transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z + 2);
             direction = 1;
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
-            transform.position = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z + 5);
+            transform.position = new Vector3(transform.position.x - 2, transform.position.y, transform.position.z + 2);
             direction = 2;
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
-            transform.position = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z - 5);
+            transform.position = new Vector3(transform.position.x - 2, transform.position.y, transform.position.z - 2);
             direction = 3;
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
         {
-            transform.position = new Vector3(transform.position.x + 5, transform.position.y, transform.position.z - 5);
+            transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z - 2);
             direction = 4;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 5);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
             direction = 5;
         }
         else if (Input.GetKey(KeyCode.W))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 5);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
             direction = 6;
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            transform.position = new Vector3(transform.position.x + 5, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
             direction = 7;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            transform.position = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - 2, transform.position.y, transform.position.z);
             direction = 8;
         }
     }
